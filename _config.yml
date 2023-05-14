@@ -1,6 +1,6 @@
 title : Spike Wang's blog
-name: 'Spike Wang's blog'
-description: 'programmer, back-end, blog'
+name: Spike Wang's blog
+description: programmer, back-end, blog
 
 markdown: kramdown
 highlighter: rouge
