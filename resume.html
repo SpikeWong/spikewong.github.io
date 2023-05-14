@@ -1,0 +1,26 @@
+---
+layout: page
+title: Resume
+markdown: true
+---
+
+<h3>Baidu</h3>
+<strong>Back-end development engineer 2023-now</strong>
+
+<h3>Crypto.com</h3> 
+<strong>Senior back-end development engineer 2022-2023</strong>
+<ul>
+<li>design and development of user authentication-related module functions. Using the existing 2FA, face recognition, and other technologies for user authentication and account locking.</li>
+<li>designs and implements a delay task queue based on Postgresql to realize the asynchronous suspension of various cash flow activities after the user locks the account. The delay queue provides asynchronous/scheduled task execution, execution status display, and retry and other functions.</li>
+<li>pushed and landed the Distributed Tracing. Aiming at the problem that it is difficult to locate bugs under the microservice architecture, the Distributed Tracing is designed based on OpenTelemetry. By RequestID and connecting the logs of each microservice, the QA and user problem reporting and troubleshooting efficiency are improved.</li>
+<li>improve the existing CI infrastructure. Based on the original UT, API automation testing is introduced, and linter is used to ensure the overall style of the project is unified.</li>
+</ul>
+
+<h3>Bytedance</h3> 
+<strong>Back-end development engineer 2021-2022</strong>
+<ul>
+    <li>is mainly involved in the development and maintenance of CRM systems. Design and development of customer information aggregation, customer reach and customer operations, and other functions.</li>
+    <li>designed and developed a heterogeneous data consumption query module for the needs of customer information aggregation and display. the Binlog consumption tool consumes data from multiple microservice databases in near real-time, uses Faas to consume the data, and finally writes the data to Elasticsearch for query display.</li>
+    <li>uses the rule engine to realize the dynamic configuration of distribution and circulation rules for the frequently changing needs of customer lead distribution and circulation. By developing a rule engine that can parse DSL, the original complex rule code is transformed into dynamically updated rule data, thus improving operational efficiency.</li>
+    <li>responsible for the construction and transformation of team Monorepo. Early reference DDD design Monorepo warehouse structure and developed a specification document. In the mid-term, more than 10 microservice warehouses in the team were migrated and CI/CD transformation was carried out. In the later period, a number of optimization measures were taken for the Monorepo, such as controlling the test range of a single CI and extracting the common package among multiple projects.</li>
+</ul>
