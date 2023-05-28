@@ -25,16 +25,16 @@ redis-memory-for-key 是 rdb-tools 中的一个 script,所以首先我们需要�
 pip install rdbtools 
 ```
 
-<div class="wp-block-image"><figure class="aligncenter">![](https://spike.dev/wp-content/uploads/2019/09/安装rdbtools-2.png)</figure></div>#### 向 redis 插入 key 
+<div class="wp-block-image"><figure class="aligncenter">![](/assets/wp-content/uploads/2019/09/安装rdbtools-2.png)</figure></div>#### 向 redis 插入 key 
 
 ```bash
 HMSET runoobkey name "redis tutorial" description "redis basic commands for caching" likes 20 visitors 2
 ```
 
-<figure class="wp-block-image">![](https://spike.dev/wp-content/uploads/2019/09/向-redis-插入-key.png)</figure>####  使用 redis-memory-for-key 
+<figure class="wp-block-image">![](/assets/wp-content/uploads/2019/09/向-redis-插入-key.png)</figure>####  使用 redis-memory-for-key 
 
 ```bash
 redis-memory-for-key -s localhost -p 6379 runoobkey
 ```
 
-<figure class="wp-block-image">![](https://spike.dev/wp-content/uploads/2019/09/使用-redis-memory-for-key.png)</figure>由图中可以看出 elements 的个数为 4 ,占用的内存为 158 bytes.
+<figure class="wp-block-image">![](/assets/wp-content/uploads/2019/09/使用-redis-memory-for-key.png)</figure>由图中可以看出 elements 的个数为 4 ,占用的内存为 158 bytes.

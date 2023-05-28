@@ -54,7 +54,7 @@ class Application < Sinatra::Base
 end
 ```
 
-现在，在终端启动我们的服务，并且访问localhost:9292/order/payment ![](https://spike.dev/wp-content/uploads/2020/04/1587275923851-1024x435.jpg)
+现在，在终端启动我们的服务，并且访问localhost:9292/order/payment ![](/assets/wp-content/uploads/2020/04/1587275923851-1024x435.jpg)
 
 可以看到，我们现在已经成功支付一笔订单了。为了产生更多的数据方便统计与展示，我们可以用 curl command 多次请求我们的接口，并且为了验证 prometheus 正确地统计了订单数据，我们将返回结果先保存在 txt 文件中，并且将结果按照状态进行统计，将其与 prometheus 统计的数据进行对比。
 
@@ -69,7 +69,7 @@ spike:~ apple1$ cat results.txt |grep -c cancel
 ```
 
 由此我们可以看出，共有 155 次支付成功，177次支付失败和 168 次取消支付。与 prometheus 后台的数据进行对比后发现一致。  
-![](https://spike.dev/wp-content/uploads/2020/04/下载-1-1024x556.png)
+![](/assets/wp-content/uploads/2020/04/下载-1-1024x556.png)
 
 ### 总结
 

@@ -18,14 +18,14 @@ tags:
 ## 概览
 
 最近接手的项目有很多让我觉得匪夷所思的地方，其中就包括一个 8 cores,16 GB 内存的 postgresql 9.4 版本的 RDS 设置了 1500 的 max\_connections。之前我对 max\_connections 到底该设置多少也没有一个具体的概念，但是 1500 这么大的数目让我不得不去了解一下 max\_connections 到底该如何设置？  
-熟悉数据库的朋友都知道 max\_connections 会影响数据库的并发连接数，当数据库到达设置的 max\_connections 数值时，则会拒接新的 client。在[mysql的基础架构是怎样的呢？](https://spike.dev/2019/04/26/mysql%e7%9a%84%e5%9f%ba%e7%a1%80%e6%9e%b6%e6%9e%84%e6%98%af%e6%80%8e%e6%a0%b7%e7%9a%84%e5%91%a2%ef%bc%9f/ "mysql的基础架构是怎样的呢？")我们就提到过 mysql server 的连接器，而 max\_connections 就是约束了连接器。这么看来，如果把 max\_connections 设置为 infinite 好像能够提高数据库的并发度，但是事实却并不是这样。接下来，就让我们一起来看看 max\_connections 是如何影响并发度并且怎样设置一个合理的大小呢?
+熟悉数据库的朋友都知道 max\_connections 会影响数据库的并发连接数，当数据库到达设置的 max\_connections 数值时，则会拒接新的 client。在[mysql的基础架构是怎样的呢？](/assets/2019/04/26/mysql%e7%9a%84%e5%9f%ba%e7%a1%80%e6%9e%b6%e6%9e%84%e6%98%af%e6%80%8e%e6%a0%b7%e7%9a%84%e5%91%a2%ef%bc%9f/ "mysql的基础架构是怎样的呢？")我们就提到过 mysql server 的连接器，而 max\_connections 就是约束了连接器。这么看来，如果把 max\_connections 设置为 infinite 好像能够提高数据库的并发度，但是事实却并不是这样。接下来，就让我们一起来看看 max\_connections 是如何影响并发度并且怎样设置一个合理的大小呢?
 
 ## max\_connections 是如何影响并发度的?
 
 拿 mysql 举例，当我们设置 max\_connections 值为1时，此时包括 mysql 为 super user 保留的 connection，mysql 此时能够允许 client 的连接个数为 2。  
 为了了解 mysql 在达到 max\_connections 后是如何处理新的数据库连接的，首先确保我们这个时候同时打开了 3 个 terminal,其中两个 terminal 通过 `mysql -u root -p` 可以连接成功，当第三个 terminal 尝试连接时就会出现 `ERROR 1040 (HY000): Too many connections`。
 
-![](https://spike.dev/wp-content/uploads/2020/07/too_many_connections-1024x845.jpg)
+![](/assets/wp-content/uploads/2020/07/too_many_connections-1024x845.jpg)
 
 postgresql 也类似于此，当我们达到 postgresql 达到的 limit 时，则会出现 `psql: error: could not connect to server: FATAL:  remaining connection slots are reserved for non-replication superuser connections`。
 
@@ -41,10 +41,10 @@ postgresql 也类似于此，当我们达到 postgresql 达到的 limit 时，�
 
 我们将在 3.1 Ghz, 2 cores 8GB 的机器上使用 pgbench 测试 postgresql 在不同活跃连接数下的性能表现。然后我们通过更新 postgresql.conf 将 max\_connections 设置为 1500，并确保在更新 conf 文件后重启 postgresql。
 
-![](https://spike.dev/wp-content/uploads/2020/07/tps随connections变化-1024x803.jpg)
+![](/assets/wp-content/uploads/2020/07/tps随connections变化-1024x803.jpg)
 
 <center>tps 随 connections 变化</center>  
-![](https://spike.dev/wp-content/uploads/2020/07/average_latency-1024x802.jpg)  
+![](/assets/wp-content/uploads/2020/07/average_latency-1024x802.jpg)  
 <center>average\_latency(ms) 随 connections 变化</center>由上图可以看出，在随着 connnections 数量不断增加的情况下，tps 先上升然后下降，而 average\_latency 则一直在增加。
 
 为什么结果是这样的呢？

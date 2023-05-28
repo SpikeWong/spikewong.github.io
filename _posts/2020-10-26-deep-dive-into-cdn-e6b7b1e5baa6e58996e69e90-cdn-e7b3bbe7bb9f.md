@@ -4,7 +4,7 @@ title: 'Deep dive into CDN &#8211; 深度剖析 CDN 系统'
 date: '2020-10-26T00:58:07+08:00'
 author: Spike
 layout: post
-guid: 'https://spike.dev/?p=563'
+guid: '/assets/?p=563'
 permalink: /2020/10/26/deep-dive-into-cdn-%e6%b7%b1%e5%ba%a6%e5%89%96%e6%9e%90-cdn-%e7%b3%bb%e7%bb%9f/
 post_views_count:
     - '586'
@@ -18,7 +18,7 @@ tags:
 #### 概览
 
 关于 CDN 相信大家一定都不陌生，这样一个开盒即用的云计算产品无时无刻不影响我们的生活。当我们打开百度搜索，或者打开斗鱼虎牙观看直播时，我们浏览器其实都是从附近的 CDN 节点获取的网络响应。由此可以看出，CDN 在我们与服务器通信的过程中，扮演了一个中间节点的角色，但是这个中间节点与普通的路由节点又有什么具体的差异呢，让我们一起来深挖 CDN 的各种细节。  
-![](https://spike.dev/wp-content/uploads/2020/10/1603617397121.jpg)
+![](/assets/wp-content/uploads/2020/10/1603617397121.jpg)
 
 <center>图1.spike.dev CDN 使用情况</center>#### CDN 是什么
 
@@ -30,7 +30,7 @@ CDN 是一个分布式系统，而该系统的各个节点都具有地理上靠�
 
 在了解了 CDN 的作用以后，CDN 是如何在整个网络请求链路过程中扮演内容分发者的角色。  
 首先，我们需要了解在无 CDN 参与情况下的请求响应过程：  
-![](https://spike.dev/wp-content/uploads/2020/10/无-cdn-参与网络请求过程.png)
+![](/assets/wp-content/uploads/2020/10/无-cdn-参与网络请求过程.png)
 
 <center>图2. 无 CDN 参与的请求过程</center>1. 用户向浏览器提供要访问的域名；
 2. 浏览器向 DNS 请求解析域名，以得到此域名对应的IP地址；
@@ -38,7 +38,7 @@ CDN 是一个分布式系统，而该系统的各个节点都具有地理上靠�
 4. 浏览器根据域名主机返回的数据显示网页的内容。
 
 在服务器主机和用户之间引入 CDN 后，对用户而言，和未引入之前不会有不同的感觉。一个简单的 CDN 网络，只需要几个 CDN 缓存服务器以及一个负载均衡 DNS 服务器就行了。流程如下：  
-![](https://spike.dev/wp-content/uploads/2020/10/20190514193101652.png)
+![](/assets/wp-content/uploads/2020/10/20190514193101652.png)
 
 <center> 图3. 有 CDN 参与的请求过程</center>1. 用户向浏览器提供要访问的域名；
 2. 浏览器向 DNS 服务器请求解析，由于 CDN 对域名解析过程进行了调整，所以一般得到的是该域名对应的 CNAME 记录，为了得到实际 IP 地址，浏览器需要再次对获得的 CNAME 域名进行解析以得到实际的 IP 地址；在此过程中，使用的全局负载均衡 DNS 解析，如根据地理位置信息解析对应的 IP 地址，使得用户能就近访问。

@@ -18,7 +18,7 @@ tags:
 ## 前言
 
 前段时间我的博客后台 css 一直处于 not work 的状态，导致我一直没法更新文章。后来还是找到法子解决了，如果有类似问题的朋友可以参考这个链接🔗<https://stackoverflow.com/questions/18769141/wordpress-admin-not-loading-css-js>  
-![](https://spike.dev/wp-content/uploads/2020/06/wordpress-博客-css-失效-1024x542.png)  
+![](/assets/wp-content/uploads/2020/06/wordpress-博客-css-失效-1024x542.png)  
 今天我就跟大家分享一下近期学习 git 底层的一些知识，包括 git 的 3 种对主要象，git merge 的方式以及原理，常用的 git 命令等等。
 
 ## Git 简介
@@ -27,7 +27,7 @@ git 是 linux 之父林纳斯开发的一个版本控制工具，最初只是用
 话说在如今，为什么 git 作为一个版本控制工具会一家独大呢？首先版本控制工具可以分为集中式版本控制工具和分布式版本控制工具。版本控制工具需要解决的一个很重要的问题是多人如何协同开发，换句话说多个人对同一个文件的修改采取什么策略合并？集中式版本控制系统给出的方案是决定权由单点控制，当有人对某个个文件进行修改时就对文件进行加锁，其余人则被禁止对文件进行变更，这就是我们常见的悲观锁！而分布式版本控制系统则允许多个人同时对本地文件进行修改，在工作流合并的时候根据合并策略对文件内容进行选择性合并。Git 作为分布式版本控制工具的代表提倡 Everthing is local，你不必连接版本控制服务器就能在本地进行开发。  
 除此以外，git 有别于其他版本控制工具每次提交只是记录文件的变更记录，git 每次提交的时候都会为当前仓库生成整个快照。那么有个小伙伴可能就有疑问了，如果像 oracle 这样大的项目，我只是更改了某行代码的注释，难道 git 也要把整个项目快照下来，这样岂不是很浪费空间？为了解决这个问题，git 在每次提交的时候都会为未做任何变更的文件保存一个链向上一个版本的指针。所以，整个 git 的快照流程将会如下图所示
 
-![](https://spike.dev/wp-content/uploads/2020/06/git-snapshots.png)
+![](/assets/wp-content/uploads/2020/06/git-snapshots.png)
 
 ## Git 存储原理
 
@@ -108,7 +108,7 @@ first commit
 ```
 
 我们可以看到 commit 对象里保存了 author, commiter 以及一个 tree 对象（非项目的首个 commit 还会有 parent 信息）。所以当我们每次生成 commit 的时候，git 会记录下 commiter 等信息，还会链向一个 tree，这个 tree 里面就包含了我们当前项目里的所有内容 。所以至此我们就能明白整个 git 的文件存储链路是  
-![](https://spike.dev/wp-content/uploads/2020/06/git-objects-存储.png)
+![](/assets/wp-content/uploads/2020/06/git-objects-存储.png)
 
 ## 总结
 

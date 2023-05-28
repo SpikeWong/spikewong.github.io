@@ -144,10 +144,10 @@ scrape_configs:
 
 prometheus 默认 15s 进行一次采集。在配置好需要采集的服务地址后，通过`./prometheus`运行 prometheus 服务器。此时你就可以在 sinatra 的 server output 看到 metrics path 的请求记录。  
 运行浏览器访问 localhost:9090 ，选择相应的 metrics 可以看到基于时间的相关数据。  
-![](https://spike.dev/wp-content/uploads/2020/04/1586093520563-1024x663.jpg)
+![](/assets/wp-content/uploads/2020/04/1586093520563-1024x663.jpg)
 
 prometheus 提供了一套 promql 语言，你可以通过相应的语法对数据进行分析和聚合。下图就展示了在过去1分钟每个接口每秒的平均请求次数。  
-![](https://spike.dev/wp-content/uploads/2020/04/1586094018580-1024x670.jpg)
+![](/assets/wp-content/uploads/2020/04/1586094018580-1024x670.jpg)
 
 ## 总结
 
