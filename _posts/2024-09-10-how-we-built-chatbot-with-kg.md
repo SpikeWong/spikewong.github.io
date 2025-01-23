@@ -151,8 +151,6 @@ ITP 自动化测试目前共包含 185 个测试 case，涵盖了知识图谱当
 
 Copilot 企业助手是基于大模型的智能客服，能够为用户提供加盟，采购类的服务咨询，同时也能够基于站内的信息针对投诉以及信息查询等场景的提供建议。从内容生成和交互的角度，Copilot 助手基于用户的意图进行不同方向的对话引导，引导方向包含收集用户信息，回答用户问题以及处理售后反馈等。同时结合站内的商品推荐，企业名录和供需集市等功能从多维度满足用户的需求。
 
-![img](https://rte.weiyun.baidu.com/wiki/attach/image/api/imageDownloadAddress?attachId=9bec87501b304592bcfb6dcd83ccee6e&docGuid=2AJzFtwxgj9m1G)
-
 ![img](/assets/wp-content/uploads/2024/09/imageDownloadAddress-20250123200902883.png)
 
 ![img](/assets/wp-content/uploads/2024/09/imageDownloadAddress-20250123200902751.png)
