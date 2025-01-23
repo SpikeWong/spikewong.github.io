@@ -159,7 +159,7 @@ Copilot 企业助手是基于大模型的智能客服，能够为用户提供加
 
 ![img](/assets/wp-content/uploads/2024/09/imageDownloadAddress-20250123200903653.png)
 
-##### 项目架构
+#### 项目架构
 
 Copilot 的对话模块主要基于 [Directional-Stimulus-Promting](https://www.promptingguide.ai/techniques/dsp) 的手段进行基于不同场景的对话生成，整个对话过程大致包含行动建议生成 -> 相关知识检索 -> 回复生成三个步骤。
 
