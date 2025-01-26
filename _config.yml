@@ -1,6 +1,6 @@
-title : Spike Wang's blog
+title: Spike Wang's blog
 name: Spike Wang's blog
-description: programmer, back-end, blog
+description: Tech blog focusing on backend development, Golang, LLM, MySQL, and system architecture. Personal insights on programming and AI.
 
 markdown: kramdown
 highlighter: rouge
@@ -8,12 +8,12 @@ javascript_enabled: true
 
 featured_posts_title: Popular Posts
 featured_posts:
-  - url: 'https://spike.wiki/2021/03/15/%e8%bf%98%e5%9c%a8%e5%92%b8%e9%b1%bc%e5%90%97%e5%bf%ab%e7%94%a8-notion-%e7%ae%a1%e7%90%86%e7%94%9f%e6%b4%bb%e5%90%a7/'
-    title: '还在咸鱼吗?快用 Notion 管理生活吧!'
-  - url: 'https://spike.wiki/2020/07/26/db-max_connections-%e7%9c%9f%e7%9a%84%e8%b6%8a%e5%a4%a7%e8%b6%8a%e5%a5%bd%e5%90%97/'
-    title: '数据库的 max_connections 真的越大越好吗?'
-  - url: 'https://spike.wiki/2021/01/27/%e9%87%8d%e6%96%b0%e8%ae%a4%e8%af%86%e6%b6%88%e6%81%af%e9%98%9f%e5%88%97/'
-    title: '重新认识消息队列'
+  - url: https://spike.wiki/2021/03/15/%e8%bf%98%e5%9c%a8%e5%92%b8%e9%b1%bc%e5%90%97%e5%bf%ab%e7%94%a8-notion-%e7%ae%a1%e7%90%86%e7%94%9f%e6%b4%bb%e5%90%a7/
+    title: 还在咸鱼吗?快用 Notion 管理生活吧!
+  - url: https://spike.wiki/2020/07/26/db-max_connections-%e7%9c%9f%e7%9a%84%e8%b6%8a%e5%a4%a7%e8%b6%8a%e5%a5%bd%e5%90%97/
+    title: 数据库的 max_connections 真的越大越好吗?
+  - url: https://spike.wiki/2021/01/27/%e9%87%8d%e6%96%b0%e8%ae%a4%e8%af%86%e6%b6%88%e6%81%af%e9%98%9f%e5%88%97/
+    title: 重新认识消息队列
 
 collections:
   news:
@@ -39,3 +39,5 @@ defaults:
 
 plugins:
   - jekyll-sitemap
+
+google_analytics: G-67SXK57Y49
