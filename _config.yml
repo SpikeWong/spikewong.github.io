@@ -1,6 +1,8 @@
-title: Spike Wang's blog
-name: Spike Wang's blog
-description: Tech blog focusing on backend development, Golang, LLM, MySQL, and system architecture. Personal insights on programming and AI.
+title: Spike Wang 的技术博客 | 后端开发 · Golang · LLM · MySQL
+name: Spike Wang 的技术博客
+author:
+  name: Spike Wang
+description: 专注后端开发、Golang、大模型应用、MySQL 和系统架构的技术博客。分享编程实践、AI 应用经验和个人技术见解。
 
 markdown: kramdown
 highlighter: rouge
