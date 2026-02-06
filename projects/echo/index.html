@@ -1,0 +1,226 @@
+---
+layout: default
+title: Echo - 记录每一次相遇
+---
+
+<header class="echo-header">
+  <h1>Echo</h1>
+  <p class="subtitle">使用蓝牙技术记录用户之间偶遇的应用</p>
+</header>
+
+<hr class="stylish"/>
+
+<main>
+  <section class="echo-intro">
+    <p class="lead">
+      Echo 是一款创新的社交应用，利用蓝牙低功耗技术（BLE）自动记录你与其他 Echo 用户的偶遇时刻。无论是在咖啡店、公园还是街头，当你们擦肩而过，Echo 都会悄悄地记录下这份缘分。
+    </p>
+    <p>
+      所有数据完全存储在你的设备本地，我们不会上传任何数据到服务器，你的隐私完全由你掌控。
+    </p>
+  </section>
+  
+  <section class="echo-features">
+    <h2>✨ 核心功能</h2>
+    <div class="features-grid">
+      <div class="feature-item">
+        <h3>🎭 匿名遇见</h3>
+        <p>通过蓝牙自动发现附近的 Echo 用户，无需主动操作</p>
+      </div>
+      <div class="feature-item">
+        <h3>🗺️ 时空地图</h3>
+        <p>在地图上回顾所有相遇的地点和时间</p>
+      </div>
+      <div class="feature-item">
+        <h3>📊 时光统计</h3>
+        <p>查看你的社交足迹和相遇数据的可视化分析</p>
+      </div>
+      <div class="feature-item">
+        <h3>🔒 隐私优先</h3>
+        <p>所有数据本地存储，不上传云端</p>
+      </div>
+    </div>
+  </section>
+  
+  <section class="echo-tech">
+    <h2>🛠️ 技术栈</h2>
+    <div class="tech-stack">
+      <span class="tech-item">📱 iOS</span>
+      <span class="tech-item">🚀 SwiftUI</span>
+      <span class="tech-item">🗄️ CoreData</span>
+      <span class="tech-item">📡 Bluetooth LE</span>
+      <span class="tech-item">🗺️ MapKit</span>
+    </div>
+  </section>
+  
+  <section class="echo-privacy">
+    <h2>🔒 隐私与安全</h2>
+    <p>我们非常重视您的隐私。Echo 采用本地优先的设计理念：</p>
+    <ul class="privacy-list">
+      <li>所有数据仅存储在您的设备本地</li>
+      <li>不运营任何服务器</li>
+      <li>数据不会上传到互联网</li>
+      <li>不会与任何第三方共享数据</li>
+    </ul>
+    <p class="privacy-link">
+      <a href="/projects/echo/privacy" class="btn btn-secondary">📄 查看隐私政策</a>
+    </p>
+  </section>
+  
+  <section class="echo-download">
+    <h2>📥 下载</h2>
+    <p>Echo 即将上架 App Store，敬请期待。</p>
+    <div class="download-links">
+      <span class="btn btn-disabled">🍎 App Store (即将推出)</span>
+      <a href="https://github.com/SpikeWong/Encounter" target="_blank" class="btn btn-primary">🐙 GitHub</a>
+    </div>
+  </section>
+</main>
+
+<style>
+.echo-header {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.echo-header h1 {
+  font-size: 3.5rem;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #666;
+}
+
+.echo-intro {
+  margin: 40px 0;
+}
+
+.lead {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.echo-features, .echo-tech, .echo-privacy, .echo-download {
+  margin: 50px 0;
+}
+
+.echo-features h2, .echo-tech h2, .echo-privacy h2, .echo-download h2 {
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.feature-item {
+  background: #f8f9fa;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.feature-item h3 {
+  color: #f5576c;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.feature-item p {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tech-item {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+}
+
+.privacy-list {
+  margin: 20px 0;
+  padding-left: 24px;
+}
+
+.privacy-list li {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.privacy-link {
+  margin-top: 30px;
+}
+
+.download-links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.btn-secondary {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background: #e0e0e0;
+}
+
+.btn-disabled {
+  background: #e0e0e0;
+  color: #999;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+  .echo-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

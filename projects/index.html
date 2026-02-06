@@ -1,0 +1,161 @@
+---
+layout: default
+title: Projects
+---
+
+<header>
+  <h1>Projects</h1>
+  <p>我的个人项目和开源作品</p>
+</header>
+
+<hr class="stylish"/>
+
+<main>
+  <section class="projects-grid">
+    
+    <!-- Echo 项目 -->
+    <article class="project-card" onclick="location.href='/projects/echo/'">
+      <div class="project-header">
+        <h2>Echo</h2>
+        <span class="project-tag">iOS App</span>
+      </div>
+      <p class="project-description">
+        使用蓝牙技术记录用户之间偶遇的应用。让每一次相遇都被温柔地记住。
+      </p>
+      <div class="project-tech">
+        <span class="tech-badge">SwiftUI</span>
+        <span class="tech-badge">CoreData</span>
+        <span class="tech-badge">Bluetooth LE</span>
+        <span class="tech-badge">MapKit</span>
+      </div>
+      <div class="project-links">
+        <a href="/projects/echo/" class="project-link">查看详情 →</a>
+      </div>
+    </article>
+    
+    <!-- 占位项目 -->
+    <article class="project-card project-placeholder">
+      <div class="project-header">
+        <h2>Coming Soon</h2>
+        <span class="project-tag">TBD</span>
+      </div>
+      <p class="project-description">
+        更多项目敬请期待...
+      </p>
+    </article>
+    
+  </section>
+</main>
+
+<style>
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.project-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 30px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.project-placeholder {
+  background: #f0f0f0;
+  color: #999;
+  cursor: default;
+}
+
+.project-placeholder:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.project-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.project-tag {
+  background: rgba(255,255,255,0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+.project-placeholder .project-tag {
+  background: #ddd;
+  color: #999;
+}
+
+.project-description {
+  margin: 15px 0;
+  opacity: 0.95;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.project-placeholder .project-description {
+  color: #999;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.tech-badge {
+  background: rgba(255,255,255,0.2);
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+}
+
+.project-placeholder .tech-badge {
+  background: #e0e0e0;
+  color: #999;
+}
+
+.project-links {
+  margin-top: 15px;
+}
+
+.project-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
