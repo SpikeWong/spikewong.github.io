@@ -3,7 +3,11 @@ layout: default
 title: Echo 隐私政策
 ---
 
+<!-- 隐私政策页面 - Journey Edition 配色 -->
 <header class="privacy-header">
+  <div class="echo-icon">
+    <img src="https://raw.githubusercontent.com/SpikeWong/Encounter/main/Resources/app_icon.png" alt="Echo App Icon" class="app-icon">
+  </div>
   <h1>Echo 隐私政策</h1>
   <p class="update-date">📅 最后更新日期：2026年2月6日</p>
 </header>
@@ -104,61 +108,100 @@ title: Echo 隐私政策
 </main>
 
 <style>
+/* Journey Edition 配色方案 - Golden Horizon */
+:root {
+  --sand-light: #FFF8E1;
+  --sand-gold: #EDC988;
+  --sand-deep: #D4A373;
+  --sunset-orange: #E76F51;
+  --sunset-red: #BC4749;
+  --sunset-crimson: #6A040F;
+  --text-brown: #4A3B2A;
+  --text-light: #FFFFFF;
+}
+
+/* 页面头部 */
 .privacy-header {
   text-align: center;
   padding: 40px 0;
+  background: linear-gradient(180deg, var(--sand-light) 0%, var(--sand-gold) 100%);
+  margin: -40px -20px 40px;
+  border-radius: 0 0 24px 24px;
+}
+
+.echo-icon {
+  margin-bottom: 20px;
+}
+
+.app-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(212, 163, 115, 0.4);
+  border: 3px solid rgba(255, 255, 255, 0.8);
 }
 
 .privacy-header h1 {
   font-size: 2.5rem;
   margin-bottom: 15px;
-  color: #333;
+  color: var(--sunset-red);
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(188, 71, 73, 0.2);
 }
 
 .update-date {
   display: inline-block;
-  background: #f0f0f0;
+  background: rgba(255, 255, 255, 0.8);
   padding: 8px 16px;
   border-radius: 20px;
   font-size: 0.9rem;
-  color: #666;
+  color: var(--text-brown);
 }
 
+/* 隐私内容 */
 .privacy-content section {
   margin: 40px 0;
+  padding: 25px;
+  background: linear-gradient(135deg, var(--sand-light) 0%, rgba(237, 201, 136, 0.2) 100%);
+  border-radius: 16px;
+  border-left: 4px solid var(--sunset-orange);
 }
 
 .privacy-content h2 {
-  margin: 30px 0 20px;
+  margin: 0 0 20px;
+  color: var(--sunset-red);
+  font-size: 1.5rem;
   padding-bottom: 10px;
-  border-bottom: 2px solid #f0f0f0;
-  color: #333;
+  border-bottom: 2px solid var(--sand-gold);
+  display: inline-block;
 }
 
 .privacy-content p {
   margin-bottom: 16px;
-  color: #555;
+  color: var(--text-brown);
   line-height: 1.8;
 }
 
+/* 数据表格 */
 .data-table {
   width: 100%;
   border-collapse: collapse;
   margin: 24px 0;
-  background: #f8f9fa;
-  border-radius: 8px;
+  background: white;
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .data-table th,
 .data-table td {
   padding: 16px;
   text-align: left;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--sand-gold);
 }
 
 .data-table th {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, var(--sunset-orange) 0%, var(--sunset-red) 100%);
   color: white;
   font-weight: 600;
 }
@@ -168,20 +211,23 @@ title: Echo 隐私政策
 }
 
 .data-table tr:hover {
-  background: #f0f0f0;
+  background: rgba(237, 201, 136, 0.2);
 }
 
+/* 高亮框 */
 .highlight-box {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, var(--sunset-orange) 0%, var(--sunset-red) 100%);
   color: white;
   padding: 24px;
   border-radius: 12px;
-  margin: 24px 0;
+  margin: 20px 0;
+  box-shadow: 0 4px 16px rgba(231, 111, 81, 0.3);
 }
 
 .highlight-box h3 {
-  margin-bottom: 12px;
+  margin-bottom: 15px;
   color: white;
+  font-size: 1.2rem;
 }
 
 .highlight-box ul {
@@ -191,9 +237,11 @@ title: Echo 隐私政策
 
 .highlight-box li {
   color: rgba(255,255,255,0.95);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+  line-height: 1.6;
 }
 
+/* 常规列表 */
 .regular-list {
   margin: 20px 0;
   padding-left: 24px;
@@ -201,45 +249,78 @@ title: Echo 隐私政策
 
 .regular-list li {
   margin-bottom: 10px;
-  color: #555;
+  color: var(--text-brown);
+  line-height: 1.6;
 }
 
+/* 注意框 */
 .note {
-  background: #fff3cd;
-  padding: 12px 16px;
-  border-radius: 8px;
+  background: linear-gradient(135deg, var(--sand-light) 0%, rgba(237, 201, 136, 0.4) 100%);
+  padding: 15px 20px;
+  border-radius: 10px;
   margin-top: 20px;
+  border-left: 4px solid var(--sunset-orange);
 }
 
+.note strong {
+  color: var(--sunset-red);
+}
+
+/* 联系链接 */
 .contact-link {
-  color: #f5576c;
+  color: var(--sunset-red);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 .contact-link:hover {
   text-decoration: underline;
 }
 
+/* 返回链接 */
 .back-link {
   margin-top: 50px;
   padding-top: 30px;
-  border-top: 1px solid #e0e0e0;
+  text-align: center;
 }
 
 .back-link a {
-  color: #f5576c;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, var(--sunset-orange) 0%, var(--sunset-red) 100%);
+  color: white;
   text-decoration: none;
-  font-weight: 500;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .back-link a:hover {
-  text-decoration: underline;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(231, 111, 81, 0.3);
 }
 
+/* 响应式 */
 @media (max-width: 600px) {
+  .privacy-header {
+    padding: 30px 20px;
+    margin: -40px -20px 30px;
+  }
+  
   .privacy-header h1 {
     font-size: 1.8rem;
+  }
+  
+  .app-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .privacy-content section {
+    padding: 20px;
   }
   
   .data-table {

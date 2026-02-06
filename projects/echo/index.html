@@ -3,7 +3,11 @@ layout: default
 title: Echo - 记录每一次相遇
 ---
 
+<!-- Echo 项目页面 - Journey Edition 配色 -->
 <header class="echo-header">
+  <div class="echo-icon">
+    <img src="https://raw.githubusercontent.com/SpikeWong/Encounter/main/Resources/app_icon.png" alt="Echo App Icon" class="app-icon">
+  </div>
   <h1>Echo</h1>
   <p class="subtitle">使用蓝牙技术记录用户之间偶遇的应用</p>
 </header>
@@ -24,19 +28,23 @@ title: Echo - 记录每一次相遇
     <h2>✨ 核心功能</h2>
     <div class="features-grid">
       <div class="feature-item">
-        <h3>🎭 匿名遇见</h3>
+        <div class="feature-icon">🎭</div>
+        <h3>匿名遇见</h3>
         <p>通过蓝牙自动发现附近的 Echo 用户，无需主动操作</p>
       </div>
       <div class="feature-item">
-        <h3>🗺️ 时空地图</h3>
+        <div class="feature-icon">🗺️</div>
+        <h3>时空地图</h3>
         <p>在地图上回顾所有相遇的地点和时间</p>
       </div>
       <div class="feature-item">
-        <h3>📊 时光统计</h3>
+        <div class="feature-icon">📊</div>
+        <h3>时光统计</h3>
         <p>查看你的社交足迹和相遇数据的可视化分析</p>
       </div>
       <div class="feature-item">
-        <h3>🔒 隐私优先</h3>
+        <div class="feature-icon">🔒</div>
+        <h3>隐私优先</h3>
         <p>所有数据本地存储，不上传云端</p>
       </div>
     </div>
@@ -78,43 +86,87 @@ title: Echo - 记录每一次相遇
 </main>
 
 <style>
+/* Journey Edition 配色方案 - Golden Horizon */
+:root {
+  --sand-light: #FFF8E1;
+  --sand-gold: #EDC988;
+  --sand-deep: #D4A373;
+  --sunset-orange: #E76F51;
+  --sunset-red: #BC4749;
+  --sunset-crimson: #6A040F;
+  --text-brown: #4A3B2A;
+  --text-light: #FFFFFF;
+}
+
+/* 页面头部 */
 .echo-header {
   text-align: center;
   padding: 40px 0;
+  background: linear-gradient(180deg, var(--sand-light) 0%, var(--sand-gold) 100%);
+  margin: -40px -20px 40px;
+  border-radius: 0 0 24px 24px;
+}
+
+.echo-icon {
+  margin-bottom: 20px;
+}
+
+.app-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(212, 163, 115, 0.4);
+  border: 3px solid rgba(255, 255, 255, 0.8);
 }
 
 .echo-header h1 {
   font-size: 3.5rem;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   margin-bottom: 15px;
+  color: var(--sunset-red);
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(188, 71, 73, 0.2);
 }
 
 .subtitle {
   font-size: 1.3rem;
-  color: #666;
+  color: var(--text-brown);
+  opacity: 0.8;
 }
 
+/* 介绍部分 */
 .echo-intro {
   margin: 40px 0;
+  padding: 30px;
+  background: linear-gradient(135deg, var(--sand-light) 0%, rgba(237, 201, 136, 0.3) 100%);
+  border-radius: 16px;
+  border-left: 4px solid var(--sunset-orange);
 }
 
 .lead {
   font-size: 1.2rem;
-  color: #444;
+  color: var(--text-brown);
   line-height: 1.8;
   margin-bottom: 20px;
 }
 
-.echo-features, .echo-tech, .echo-privacy, .echo-download {
+.echo-intro p:last-child {
+  color: var(--text-brown);
+  opacity: 0.7;
+  margin-bottom: 0;
+}
+
+/* 功能部分 */
+.echo-features {
   margin: 50px 0;
 }
 
-.echo-features h2, .echo-tech h2, .echo-privacy h2, .echo-download h2 {
+.echo-features h2 {
   margin-bottom: 30px;
-  color: #333;
+  color: var(--sunset-red);
+  font-size: 1.8rem;
+  border-bottom: 2px solid var(--sand-gold);
+  padding-bottom: 10px;
+  display: inline-block;
 }
 
 .features-grid {
@@ -124,22 +176,50 @@ title: Echo - 记录每一次相遇
 }
 
 .feature-item {
-  background: #f8f9fa;
-  padding: 24px;
-  border-radius: 12px;
+  background: linear-gradient(135deg, var(--sand-light) 0%, rgba(237, 201, 136, 0.2) 100%);
+  padding: 30px 24px;
+  border-radius: 16px;
   text-align: center;
+  border: 1px solid rgba(237, 201, 136, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(212, 163, 115, 0.3);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
 }
 
 .feature-item h3 {
-  color: #f5576c;
+  color: var(--sunset-red);
   margin-bottom: 12px;
   font-size: 1.1rem;
 }
 
 .feature-item p {
-  color: #666;
+  color: var(--text-brown);
+  opacity: 0.8;
   font-size: 0.95rem;
   margin: 0;
+}
+
+/* 技术栈 */
+.echo-tech {
+  margin: 50px 0;
+  padding: 30px;
+  background: linear-gradient(135deg, var(--sunset-orange) 0%, var(--sunset-red) 100%);
+  border-radius: 16px;
+  color: white;
+}
+
+.echo-tech h2 {
+  margin-bottom: 20px;
+  color: white;
+  font-size: 1.5rem;
 }
 
 .tech-stack {
@@ -149,34 +229,77 @@ title: Echo - 记录每一次相遇
 }
 
 .tech-item {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  color: white;
+  background: rgba(255, 255, 255, 0.2);
   padding: 10px 20px;
   border-radius: 25px;
   font-size: 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* 隐私部分 */
+.echo-privacy {
+  margin: 50px 0;
+  padding: 30px;
+  background: linear-gradient(135deg, rgba(255, 248, 225, 0.8) 0%, rgba(237, 201, 136, 0.2) 100%);
+  border-radius: 16px;
+  border: 2px solid var(--sand-gold);
+}
+
+.echo-privacy h2 {
+  margin-bottom: 20px;
+  color: var(--sunset-red);
+  font-size: 1.5rem;
+}
+
+.echo-privacy > p {
+  color: var(--text-brown);
+  margin-bottom: 20px;
 }
 
 .privacy-list {
   margin: 20px 0;
   padding-left: 24px;
+  color: var(--text-brown);
 }
 
 .privacy-list li {
   margin-bottom: 10px;
-  color: #555;
+  line-height: 1.6;
 }
 
 .privacy-link {
   margin-top: 30px;
 }
 
+/* 下载部分 */
+.echo-download {
+  margin: 50px 0;
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(135deg, var(--sand-light) 0%, var(--sand-gold) 100%);
+  border-radius: 16px;
+}
+
+.echo-download h2 {
+  margin-bottom: 15px;
+  color: var(--sunset-red);
+  font-size: 1.5rem;
+}
+
+.echo-download > p {
+  color: var(--text-brown);
+  opacity: 0.7;
+  margin-bottom: 25px;
+}
+
 .download-links {
   display: flex;
   gap: 16px;
+  justify-content: center;
   flex-wrap: wrap;
-  margin-top: 20px;
 }
 
+/* 按钮样式 */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -189,22 +312,25 @@ title: Echo - 记录每一次相遇
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, var(--sunset-orange) 0%, var(--sunset-red) 100%);
   color: white;
+  box-shadow: 0 4px 12px rgba(231, 111, 81, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 6px 20px rgba(231, 111, 81, 0.4);
 }
 
 .btn-secondary {
-  background: #f0f0f0;
-  color: #333;
+  background: transparent;
+  color: var(--sunset-red);
+  border: 2px solid var(--sunset-red);
 }
 
 .btn-secondary:hover {
-  background: #e0e0e0;
+  background: var(--sunset-red);
+  color: white;
 }
 
 .btn-disabled {
@@ -214,13 +340,31 @@ title: Echo - 记录每一次相遇
   opacity: 0.7;
 }
 
+/* 响应式 */
 @media (max-width: 600px) {
+  .echo-header {
+    padding: 30px 20px;
+    margin: -40px -20px 30px;
+  }
+  
   .echo-header h1 {
     font-size: 2.5rem;
   }
   
+  .app-icon {
+    width: 100px;
+    height: 100px;
+  }
+  
   .features-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .echo-intro,
+  .echo-tech,
+  .echo-privacy,
+  .echo-download {
+    padding: 20px;
   }
 }
 </style>

@@ -3,9 +3,10 @@ layout: default
 title: Projects
 ---
 
-<header>
+<!-- Projects 页面 - Journey Edition 配色 -->
+<header class="projects-header">
   <h1>Projects</h1>
-  <p>我的个人项目和开源作品</p>
+  <p class="subtitle">我的个人项目和开源作品</p>
 </header>
 
 <hr class="stylish"/>
@@ -15,71 +16,144 @@ title: Projects
     
     <!-- Echo 项目 -->
     <article class="project-card" onclick="location.href='/projects/echo/'">
-      <div class="project-header">
-        <h2>Echo</h2>
-        <span class="project-tag">iOS App</span>
+      <div class="project-icon">
+        <img src="https://raw.githubusercontent.com/SpikeWong/Encounter/main/Resources/app_icon.png" alt="Echo App Icon">
       </div>
-      <p class="project-description">
-        使用蓝牙技术记录用户之间偶遇的应用。让每一次相遇都被温柔地记住。
-      </p>
-      <div class="project-tech">
-        <span class="tech-badge">SwiftUI</span>
-        <span class="tech-badge">CoreData</span>
-        <span class="tech-badge">Bluetooth LE</span>
-        <span class="tech-badge">MapKit</span>
-      </div>
-      <div class="project-links">
-        <a href="/projects/echo/" class="project-link">查看详情 →</a>
+      <div class="project-content">
+        <div class="project-header">
+          <h2>Echo</h2>
+          <span class="project-tag">iOS App</span>
+        </div>
+        <p class="project-description">
+          使用蓝牙技术记录用户之间偶遇的应用。让每一次相遇都被温柔地记住。
+        </p>
+        <div class="project-tech">
+          <span class="tech-badge">SwiftUI</span>
+          <span class="tech-badge">CoreData</span>
+          <span class="tech-badge">Bluetooth LE</span>
+          <span class="tech-badge">MapKit</span>
+        </div>
+        <div class="project-links">
+          <span class="project-link">查看详情 →</span>
+        </div>
       </div>
     </article>
     
     <!-- 占位项目 -->
     <article class="project-card project-placeholder">
-      <div class="project-header">
-        <h2>Coming Soon</h2>
-        <span class="project-tag">TBD</span>
+      <div class="project-content">
+        <div class="project-header">
+          <h2>Coming Soon</h2>
+          <span class="project-tag">TBD</span>
+        </div>
+        <p class="project-description">
+          更多项目敬请期待...
+        </p>
       </div>
-      <p class="project-description">
-        更多项目敬请期待...
-      </p>
     </article>
     
   </section>
 </main>
 
 <style>
+/* Journey Edition 配色方案 - Golden Horizon */
+:root {
+  --sand-light: #FFF8E1;
+  --sand-gold: #EDC988;
+  --sand-deep: #D4A373;
+  --sunset-orange: #E76F51;
+  --sunset-red: #BC4749;
+  --sunset-crimson: #6A040F;
+  --text-brown: #4A3B2A;
+  --text-light: #FFFFFF;
+}
+
+/* 页面头部 */
+.projects-header {
+  text-align: center;
+  padding: 40px 0;
+  background: linear-gradient(180deg, var(--sand-light) 0%, var(--sand-gold) 100%);
+  margin: -40px -20px 40px;
+  border-radius: 0 0 24px 24px;
+}
+
+.projects-header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: var(--sunset-red);
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(188, 71, 73, 0.2);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--text-brown);
+  opacity: 0.7;
+}
+
+/* 项目网格 */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 30px;
   margin-top: 30px;
 }
 
+/* 项目卡片 */
 .project-card {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 12px;
-  padding: 30px;
-  color: white;
+  background: linear-gradient(135deg, var(--sand-light) 0%, rgba(237, 201, 136, 0.3) 100%);
+  border-radius: 20px;
+  overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid var(--sand-gold);
   display: flex;
   flex-direction: column;
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(212, 163, 115, 0.4);
+  border-color: var(--sunset-orange);
 }
 
 .project-placeholder {
-  background: #f0f0f0;
-  color: #999;
+  background: #f5f5f5;
+  border-color: #e0e0e0;
   cursor: default;
 }
 
 .project-placeholder:hover {
   transform: none;
   box-shadow: none;
+  border-color: #e0e0e0;
+}
+
+/* 项目图标 */
+.project-icon {
+  padding: 30px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--sunset-orange) 0%, var(--sunset-red) 100%);
+}
+
+.project-icon img {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.8);
+}
+
+.project-placeholder .project-icon {
+  background: #e0e0e0;
+}
+
+/* 项目内容 */
+.project-content {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-header {
@@ -92,10 +166,12 @@ title: Projects
 .project-header h2 {
   margin: 0;
   font-size: 1.8rem;
+  color: var(--sunset-red);
 }
 
 .project-tag {
-  background: rgba(255,255,255,0.2);
+  background: linear-gradient(135deg, var(--sunset-orange) 0%, var(--sunset-red) 100%);
+  color: white;
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -108,7 +184,7 @@ title: Projects
 
 .project-description {
   margin: 15px 0;
-  opacity: 0.95;
+  color: var(--text-brown);
   line-height: 1.6;
   flex-grow: 1;
 }
@@ -117,6 +193,7 @@ title: Projects
   color: #999;
 }
 
+/* 技术标签 */
 .project-tech {
   display: flex;
   flex-wrap: wrap;
@@ -125,37 +202,53 @@ title: Projects
 }
 
 .tech-badge {
-  background: rgba(255,255,255,0.2);
-  padding: 4px 10px;
+  background: rgba(237, 201, 136, 0.4);
+  color: var(--text-brown);
+  padding: 6px 12px;
   border-radius: 15px;
   font-size: 0.8rem;
+  border: 1px solid var(--sand-gold);
 }
 
-.project-placeholder .tech-badge {
-  background: #e0e0e0;
-  color: #999;
-}
-
+/* 项目链接 */
 .project-links {
   margin-top: 15px;
 }
 
 .project-link {
-  color: white;
-  text-decoration: none;
+  color: var(--sunset-red);
   font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 5px;
 }
 
-.project-link:hover {
+.project-card:hover .project-link {
   text-decoration: underline;
 }
 
+/* 响应式 */
 @media (max-width: 600px) {
+  .projects-header {
+    padding: 30px 20px;
+    margin: -40px -20px 30px;
+  }
+  
+  .projects-header h1 {
+    font-size: 2.2rem;
+  }
+  
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .project-icon {
+    padding: 20px;
+  }
+  
+  .project-icon img {
+    width: 80px;
+    height: 80px;
   }
 }
 </style>
