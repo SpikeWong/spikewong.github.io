@@ -3,7 +3,6 @@ layout: default
 title: Projects
 ---
 
-<!-- Projects 页面 - Journey Edition 配色 -->
 <header class="projects-header">
   <h1>Projects</h1>
   <p class="subtitle">我的个人项目和开源作品</p>
@@ -56,65 +55,49 @@ title: Projects
 </main>
 
 <style>
-/* Journey Edition 配色方案 - Golden Horizon */
-:root {
-  --sand-light: #FFF8E1;
-  --sand-gold: #EDC988;
-  --sand-deep: #D4A373;
-  --sunset-orange: #E76F51;
-  --sunset-red: #BC4749;
-  --sunset-crimson: #6A040F;
-  --text-brown: #4A3B2A;
-  --text-light: #FFFFFF;
-}
-
-/* 页面头部 */
+/* 简洁黑白风格 */
 .projects-header {
   text-align: center;
   padding: 40px 0;
-  background: linear-gradient(180deg, var(--sand-light) 0%, var(--sand-gold) 100%);
-  margin: -40px -20px 40px;
-  border-radius: 0 0 24px 24px;
+  margin-bottom: 40px;
 }
 
 .projects-header h1 {
   font-size: 3rem;
   margin-bottom: 10px;
-  color: var(--sunset-red);
+  color: #1a1a1a;
   font-weight: 700;
-  text-shadow: 0 2px 4px rgba(188, 71, 73, 0.2);
 }
 
 .subtitle {
   font-size: 1.2rem;
-  color: var(--text-brown);
-  opacity: 0.7;
+  color: #666;
 }
 
 /* 项目网格 */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 30px;
-  margin-top: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
 }
 
 /* 项目卡片 */
 .project-card {
-  background: linear-gradient(135deg, var(--sand-light) 0%, rgba(237, 201, 136, 0.3) 100%);
-  border-radius: 20px;
+  background: #fff;
+  border-radius: 16px;
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-  border: 2px solid var(--sand-gold);
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #e0e0e0;
   display: flex;
   flex-direction: column;
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 40px rgba(212, 163, 115, 0.4);
-  border-color: var(--sunset-orange);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-color: #999;
 }
 
 .project-placeholder {
@@ -133,24 +116,23 @@ title: Projects
 .project-icon {
   padding: 30px;
   text-align: center;
-  background: linear-gradient(135deg, var(--sunset-orange) 0%, var(--sunset-red) 100%);
+  background: #f8f8f8;
 }
 
 .project-icon img {
-  width: 100px;
-  height: 100px;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  border: 3px solid rgba(255, 255, 255, 0.8);
+  width: 90px;
+  height: 90px;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .project-placeholder .project-icon {
-  background: #e0e0e0;
+  background: #f0f0f0;
 }
 
 /* 项目内容 */
 .project-content {
-  padding: 25px;
+  padding: 24px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -160,31 +142,32 @@ title: Projects
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .project-header h2 {
   margin: 0;
-  font-size: 1.8rem;
-  color: var(--sunset-red);
+  font-size: 1.5rem;
+  color: #1a1a1a;
+  font-weight: 600;
 }
 
 .project-tag {
-  background: linear-gradient(135deg, var(--sunset-orange) 0%, var(--sunset-red) 100%);
+  background: #1a1a1a;
   color: white;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
 }
 
 .project-placeholder .project-tag {
-  background: #ddd;
-  color: #999;
+  background: #ccc;
+  color: #666;
 }
 
 .project-description {
-  margin: 15px 0;
-  color: var(--text-brown);
+  margin: 12px 0;
+  color: #555;
   line-height: 1.6;
   flex-grow: 1;
 }
@@ -197,30 +180,27 @@ title: Projects
 .project-tech {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin: 15px 0;
+  gap: 6px;
+  margin: 12px 0;
 }
 
 .tech-badge {
-  background: rgba(237, 201, 136, 0.4);
-  color: var(--text-brown);
-  padding: 6px 12px;
-  border-radius: 15px;
+  background: #f0f0f0;
+  color: #555;
+  padding: 4px 10px;
+  border-radius: 4px;
   font-size: 0.8rem;
-  border: 1px solid var(--sand-gold);
 }
 
 /* 项目链接 */
 .project-links {
-  margin-top: 15px;
+  margin-top: 16px;
 }
 
 .project-link {
-  color: var(--sunset-red);
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
+  color: #1a1a1a;
+  font-weight: 500;
+  font-size: 0.95rem;
 }
 
 .project-card:hover .project-link {
@@ -229,11 +209,6 @@ title: Projects
 
 /* 响应式 */
 @media (max-width: 600px) {
-  .projects-header {
-    padding: 30px 20px;
-    margin: -40px -20px 30px;
-  }
-  
   .projects-header h1 {
     font-size: 2.2rem;
   }
@@ -243,12 +218,12 @@ title: Projects
   }
   
   .project-icon {
-    padding: 20px;
+    padding: 24px;
   }
   
   .project-icon img {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
   }
 }
 </style>
